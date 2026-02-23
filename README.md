@@ -1,1 +1,3 @@
-# Personal-Work
+## Writing (210A): Tutorial Blog - JSON
+
+  JSON is a language that is designed to send data between a server and a browser, and allows the developer to organize the data, pairing keys to values in a way that both the developer and computer can easily read. The syntax of JSON is very similar to JavaScript but has strict rules. The main technology that will be incorporrated is call "localStorage". It is a storage system that is built into every web browser and it lets web browsers store small portions of data onto the user's computer. Every web browser has it's own seperate localStorage so as to block a site from accessing the data of another. The storage limit of localStorage is about 5 MB and the data persistes even after a browser is closed in contrast to regular variables that disappear when closed, or cookies that have expiration dates.
