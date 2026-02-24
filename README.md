@@ -65,7 +65,18 @@ And it will be the same format for getItem and other JavaScript functions, somet
 
 ### Accessing the JSON Data
 
-The main function used for this is the JavaScript ```getItem()```, which pulls that string back out of localStorage, and uses ```JSON.parse()``` as explained earlier, to revert back to a usable object. Something of note is that if nothing is stored, ```getItem()``` will return ```null``` which can lead to your code crashing so always check! Using an if statement can be a very good method ensuring that it won't return null
+The main function used for this is the JavaScript ```getItem()```, which pulls that string back out of localStorage, and uses ```JSON.parse()``` as explained earlier, to revert back to a usable object. 
+
+Something to remember is that ff nothing is stored, ```getItem()``` will return ```null``` which can lead to your code crashing so always check! Using an if statement can be a very good method ensuring that it won't return null. Here is a simple example of how you would handle that:
+```
+let retrieved_data = JSON.parse(localStorage.getItem("StudentInformation"))
+if (retrieved_data) {
+    document.getElementById("display").textContent = retrieved_data.major
+} else {
+    console.log("No data found in localStorage")
+}
+```
+This checks if retrieved_data actually has a value before trying to use it, preventing your code from crashing on an empty localStorage. 
 
 When retrieving the data, it is also possible to access each property in the object individually. That is done by including the key name "dot" the property name. Here is an example using the object above:
 ```
